@@ -11,5 +11,6 @@
     "arrowParens": "always",
     "htmlWhitespaceSensitivity": "css",
     "endOfLine": "lf",
-    "singleAttributePerLine": false
+    "singleAttributePerLine": false,
+    "disabledLanguages": []
   }
