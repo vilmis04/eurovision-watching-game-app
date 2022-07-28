@@ -3,6 +3,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 // import { createTheme, makeTheme } from "@mui/styles";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <React.StrictMode>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<App />}></Route>
+            <Route path="/" element={<HomePage />}></Route>
           </Routes>
         </BrowserRouter>
       </React.StrictMode>
