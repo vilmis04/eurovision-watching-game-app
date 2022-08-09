@@ -1,14 +1,14 @@
 import React from "react";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "@mui/material";
-// import { createTheme, makeTheme } from "@mui/styles";
+// import { ThemeProvider, createTheme } from "@mui/system";
 import HomePage from "./pages/HomePage";
 
 function App() {
+  // const theme = createTheme();
   return (
     <>
-      {/* <ThemeProvider theme={Theme}> */}
+      {/* <ThemeProvider theme={theme}> */}
       <React.StrictMode>
         <BrowserRouter>
           <Routes>
