@@ -1,7 +1,13 @@
 import AppBar from "../components/AppBar/AppBar";
+import VotingTable from "../components/VotingTable/VotingTable";
 
 const HomePage = () => {
-  return <AppBar />;
+  return (
+    <>
+      <AppBar />
+      <VotingTable />
+    </>
+  );
 };
 
 export default HomePage;
