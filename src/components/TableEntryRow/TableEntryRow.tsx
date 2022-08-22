@@ -1,46 +1,35 @@
 import { Grid, useTheme, Typography } from "@mui/material";
+import VoteButton from "../VoteButton/VoteButton";
 import useStyles from "./TableEntryRow.styles";
 
 interface ITableEntryRowProps {
-  id?: string;
   country: string;
-  countryCode: string;
   artist: string;
   song: string;
-  flag?: string;
-  picture?: string;
-  order?: string;
-  points?: string;
-  rank?: string;
   isHeader?: boolean;
 }
 
-const TableEntryRow = (tableEntryRowProps: ITableEntryRowProps) => {
+const TableEntryRow = ({
+  country,
+  artist,
+  song,
+  isHeader = false,
+}: ITableEntryRowProps) => {
   const classes = useStyles(useTheme());
 
   return (
-    <Grid container item sx={classes.container}>
+    <Grid container item lg={12} md={6} sm={4} sx={classes.container}>
       <Grid item>
-        <Typography variant="body1">{tableEntryRowProps.order}</Typography>
-      </Grid>
-      <Grid item></Grid>
-      <Grid item>
-        <Typography variant="body1">{tableEntryRowProps.artist}</Typography>
+        <Typography variant="body1">{country}</Typography>
       </Grid>
       <Grid item>
-        <Typography variant="body1">{tableEntryRowProps.song}</Typography>
+        <Typography variant="body1">{artist}</Typography>
       </Grid>
       <Grid item>
-        <Typography variant="body1">{tableEntryRowProps.country}</Typography>
+        <Typography variant="body1">{song}</Typography>
       </Grid>
       <Grid item>
-        <Typography variant="body1">{tableEntryRowProps.rank}</Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="body1">{tableEntryRowProps.flag}</Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="body1">{tableEntryRowProps.picture}</Typography>
+        <VoteButton country={country} vote={undefined} />
       </Grid>
     </Grid>
   );

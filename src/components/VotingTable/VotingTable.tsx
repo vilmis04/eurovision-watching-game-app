@@ -9,7 +9,7 @@ const VotingTable = () => {
   return (
     <Grid container sx={classes.tableContainer}>
       {data.EV22.map((row) => (
-        <TableEntryRow {...row} />
+        <TableEntryRow {...row} key={row.country} />
       ))}
     </Grid>
   );

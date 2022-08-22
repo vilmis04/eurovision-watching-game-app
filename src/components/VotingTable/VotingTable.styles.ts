@@ -1,8 +1,10 @@
 import { Theme } from "@mui/material";
 
-export default (theme: Theme) => ({
+export default ({ spacing }: Theme) => ({
   tableContainer: {
     display: "flex",
-    paddingTop: theme.spacing(3),
+    flexDirection: "columns",
+    alignItems: "center",
+    paddingTop: spacing(3),
   },
 });
