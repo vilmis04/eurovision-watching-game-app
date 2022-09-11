@@ -30,7 +30,7 @@ const VotingTable = () => {
   ) : (
     <Grid container spacing={1} sx={styles.tableContainer}>
       {countries.map((entry: ICountry) => (
-        <Grid md={4} sm={6} xs={12} key={entry.country} sx={styles.card}>
+        <Grid item md={4} sm={6} xs={12} key={entry.country} sx={styles.card}>
           <CountryCard
             country={entry.country}
             artist={entry.artist}
