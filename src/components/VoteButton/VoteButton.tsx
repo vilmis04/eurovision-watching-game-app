@@ -7,7 +7,7 @@ interface IVoteButtonProps {
 
 const VoteButton: React.FC<IVoteButtonProps> = ({ country, vote }) => {
   return (
-    <Button variant="outlined" color={vote ? "success" : "error"}>
+    <Button variant="outlined" color={vote ? "success" : "error"} fullWidth>
       {vote ?? "Vote"}
     </Button>
   );
