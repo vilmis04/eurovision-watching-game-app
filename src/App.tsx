@@ -1,23 +1,20 @@
 import React from "react";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { ThemeProvider, createTheme } from "@mui/system";
+// import { ThemeProvider } from "@mui/system";
 import HomePage from "./pages/HomePage";
+import GlobalStyles from "./components/GlobalStyles/GlobalStyles";
 
 function App() {
-  // const theme = createTheme();
   return (
-    <>
-      {/* <ThemeProvider theme={theme}> */}
-      <React.StrictMode>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />}></Route>
-          </Routes>
-        </BrowserRouter>
-      </React.StrictMode>
-      {/* </ThemeProvider> */}
-    </>
+    <React.StrictMode>
+      <BrowserRouter>
+        <GlobalStyles />
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
   );
 }
 
