@@ -1,6 +1,6 @@
 import { Theme } from "@mui/material";
 
-export default ({ spacing, breakpoints }: Theme) => ({
+export const useSx = ({ spacing, breakpoints }: Theme) => ({
   tableContainer: {
     display: "flex",
     flexDirection: "columns",
